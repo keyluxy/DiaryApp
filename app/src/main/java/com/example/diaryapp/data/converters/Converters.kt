@@ -1,4 +1,4 @@
-package com.example.diaryapp.data
+package com.example.diaryapp.data.converters
 
 import android.os.Build
 import androidx.annotation.RequiresApi

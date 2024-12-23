@@ -8,7 +8,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.annotation.RequiresApi
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
-import com.example.diaryapp.data.AppDatabase
+import com.example.diaryapp.data.database.AppDatabase
 import com.example.diaryapp.repository.TaskRepository
 import com.example.diaryapp.ui.screens.TaskApp
 import com.example.diaryapp.ui.theme.DiaryAppTheme
@@ -34,14 +34,11 @@ class MainActivity : ComponentActivity() {
         val repository = TaskRepository(database.taskDao())
         taskViewModel = ViewModelProvider(this, TaskViewModelFactory(repository))[TaskViewModel::class.java]
 
-        // Инициализация SharedPreferences
         sharedPreferences = getSharedPreferences("app_prefs", Context.MODE_PRIVATE)
 
-        // Проверяем, была ли уже выполнена инициализация базы данных
         if (!sharedPreferences.getBoolean("is_database_initialized", false)) {
             lifecycleScope.launch {
                 initializeDatabaseFromJson(this@MainActivity, database.taskDao())
-                // Устанавливаем флаг, что инициализация выполнена
                 sharedPreferences.edit().putBoolean("is_database_initialized", true).apply()
             }
         }

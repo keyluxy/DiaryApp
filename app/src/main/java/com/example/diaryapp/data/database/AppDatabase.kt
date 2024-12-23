@@ -1,4 +1,4 @@
-package com.example.diaryapp.data
+package com.example.diaryapp.data.database
 
 
 import androidx.room.Database
@@ -6,6 +6,9 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import android.content.Context
 import androidx.room.TypeConverters
+import com.example.diaryapp.data.converters.Converters
+import com.example.diaryapp.data.dao.TaskDao
+import com.example.diaryapp.data.model.Task
 
 @TypeConverters(Converters::class)
 @Database(entities = [Task::class], version = 1)

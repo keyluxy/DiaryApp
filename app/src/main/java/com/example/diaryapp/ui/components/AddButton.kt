@@ -1,4 +1,4 @@
-package com.example.diaryapp.ui
+package com.example.diaryapp.ui.components
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material3.Button

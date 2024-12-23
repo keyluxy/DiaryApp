@@ -10,8 +10,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import com.example.diaryapp.data.Task
-import com.example.diaryapp.ui.AddButton
+import com.example.diaryapp.data.model.Task
+import com.example.diaryapp.ui.components.AddButton
+import com.example.diaryapp.ui.components.TimeSlot
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 
@@ -33,7 +34,7 @@ fun TaskListScreen(
 
             Spacer(modifier = Modifier.height(16.dp))
 
-            DatePicker(
+            com.example.diaryapp.ui.components.DatePicker(
                 date = selectedDate,
                 onDateChange = { selectedDate = it }
             )

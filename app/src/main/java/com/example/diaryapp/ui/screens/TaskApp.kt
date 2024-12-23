@@ -6,9 +6,8 @@ import androidx.annotation.RequiresApi
 
 import androidx.compose.runtime.*
 import androidx.compose.runtime.livedata.observeAsState
-import com.example.diaryapp.data.Task
+import com.example.diaryapp.data.model.Task
 import com.example.diaryapp.viewmodels.TaskViewModel
-import java.time.LocalDate
 
 @RequiresApi(Build.VERSION_CODES.O)
 @Composable
@@ -18,7 +17,7 @@ fun TaskApp(viewModel: TaskViewModel) {
     val tasks by viewModel.tasks.observeAsState(initial = listOf())
 
     LaunchedEffect(Unit) {
-        viewModel.fetchAllTasks() // Загружаем все задачи
+        viewModel.fetchAllTasks()
     }
 
     when (currentScreen) {

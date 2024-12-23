@@ -5,8 +5,8 @@ import android.os.Build
 import android.util.Log
 import androidx.annotation.RequiresApi
 import com.example.diaryapp.R
-import com.example.diaryapp.data.Task
-import com.example.diaryapp.data.TaskDao
+import com.example.diaryapp.data.model.Task
+import com.example.diaryapp.data.dao.TaskDao
 import com.squareup.moshi.JsonClass
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory

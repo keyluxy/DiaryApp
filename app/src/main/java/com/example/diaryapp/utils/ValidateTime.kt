@@ -1,4 +1,4 @@
-package com.example.diaryapp.utils.validate_time
+package com.example.diaryapp.utils
 
 // Функция для валидации времени
 fun validateTime(time: String): Boolean {

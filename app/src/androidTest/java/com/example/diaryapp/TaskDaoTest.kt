@@ -6,9 +6,9 @@ import org.junit.Test
 import org.junit.runner.RunWith
 import androidx.room.Room
 import androidx.test.core.app.ApplicationProvider
-import com.example.diaryapp.data.AppDatabase
-import com.example.diaryapp.data.Task
-import com.example.diaryapp.data.TaskDao
+import com.example.diaryapp.data.database.AppDatabase
+import com.example.diaryapp.data.model.Task
+import com.example.diaryapp.data.dao.TaskDao
 import kotlinx.coroutines.runBlocking
 import org.junit.After
 import org.junit.Assert.assertEquals

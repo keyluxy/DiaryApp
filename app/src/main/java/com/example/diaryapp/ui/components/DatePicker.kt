@@ -1,4 +1,4 @@
-package com.example.diaryapp.ui.screens
+package com.example.diaryapp.ui.components
 
 import android.os.Build
 import android.widget.CalendarView

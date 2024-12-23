@@ -23,10 +23,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
-import com.example.diaryapp.data.Task
-import com.example.diaryapp.ui.AddButton
-import com.example.diaryapp.ui.RoundedCornerTextField
-import com.example.diaryapp.utils.validate_time.validateTime
+import com.example.diaryapp.data.model.Task
+import com.example.diaryapp.ui.components.AddButton
+import com.example.diaryapp.ui.components.RoundedCornerTextField
+import com.example.diaryapp.utils.validateTime
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 
@@ -59,7 +59,6 @@ fun TaskDetailScreen(
         Text(text = "Редактирование задачи", style = MaterialTheme.typography.titleLarge, color = Color.White)
         Spacer(modifier = Modifier.height(16.dp))
 
-        // Название задачи
         RoundedCornerTextField(
             text = taskTitle,
             label = "Название",
@@ -69,7 +68,6 @@ fun TaskDetailScreen(
 
         Spacer(modifier = Modifier.height(8.dp))
 
-        // Описание задачи
         RoundedCornerTextField(
             text = taskDescription,
             label = "Описание",
@@ -81,7 +79,6 @@ fun TaskDetailScreen(
 
         Spacer(modifier = Modifier.height(8.dp))
 
-        // Время начала
         RoundedCornerTextField(
             text = startTime,
             label = "Время начала (часы, 0-23)",
@@ -92,7 +89,6 @@ fun TaskDetailScreen(
 
         Spacer(modifier = Modifier.height(8.dp))
 
-        // Время окончания
         RoundedCornerTextField(
             text = endTime,
             label = "Время окончания (часы, 0-23)",
@@ -103,7 +99,6 @@ fun TaskDetailScreen(
 
         Spacer(modifier = Modifier.height(8.dp))
 
-        // Выбор даты
         AddButton(
             text = "Выбрать дату: ${selectedDate.format(DateTimeFormatter.ofPattern("dd MMMM yyyy"))}",
             onClick = { isDatePickerOpen = true }
@@ -124,7 +119,6 @@ fun TaskDetailScreen(
 
         Spacer(modifier = Modifier.height(16.dp))
 
-        // Удалить задачу
         Row(
             modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.SpaceBetween
@@ -137,11 +131,9 @@ fun TaskDetailScreen(
 
             Spacer(modifier = Modifier.width(8.dp))
 
-            // Сохранить задачу
             AddButton(
                 text = "Сохранить",
                 onClick = {
-                    // Сбрасываем ошибки
                     titleError = null
                     descriptionError = null
                     startTimeError = null
@@ -155,7 +147,6 @@ fun TaskDetailScreen(
                         descriptionError = "Описание не может быть пустым"
                     }
 
-                    // Проверка на корректное время
                     val startTimeValid = validateTime(startTime)
                     val endTimeValid = validateTime(endTime)
 
@@ -166,7 +157,6 @@ fun TaskDetailScreen(
                         endTimeError = "Некорректное время окончания"
                     }
 
-                    // Проверка, что startTime < endTime
                     if (startTimeValid && endTimeValid) {
                         val startTimeInt = startTime.split(":")[0].toInt()
                         val endTimeInt = endTime.split(":")[0].toInt()
@@ -176,7 +166,6 @@ fun TaskDetailScreen(
                         }
                     }
 
-                    // Если все проверки пройдены, сохраняем задачу
                     if (titleError == null && descriptionError == null && startTimeError == null && endTimeError == null) {
                         val updatedTask = task.copy(
                             title = taskTitle,

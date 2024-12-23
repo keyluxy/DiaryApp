@@ -1,6 +1,5 @@
-package com.example.diaryapp.ui.screens
+package com.example.diaryapp.ui.components
 
-import android.annotation.SuppressLint
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -12,7 +11,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.diaryapp.data.Task
+import com.example.diaryapp.data.model.Task
 
 @Composable
 fun TimeSlot(hour: Int, tasks: List<Task>, onTaskClicked: (Task) -> Unit) {
@@ -32,7 +31,6 @@ fun TimeSlot(hour: Int, tasks: List<Task>, onTaskClicked: (Task) -> Unit) {
             color = Color.Black
         )
 
-        // Отображаем задачи для текущего часа
         tasks.forEach { task ->
             TaskItem(task, onTaskClicked)
         }

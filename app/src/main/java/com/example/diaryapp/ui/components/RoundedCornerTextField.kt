@@ -1,4 +1,4 @@
-package com.example.diaryapp.ui
+package com.example.diaryapp.ui.components
 
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Column
@@ -11,7 +11,6 @@ import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.diaryapp.ui.theme.Purple40
@@ -57,7 +56,6 @@ fun RoundedCornerTextField(
             maxLines = maxLines
         )
 
-        // Отображение сообщения об ошибке
         if (errorMessage != null) {
             Text(
                 text = errorMessage,

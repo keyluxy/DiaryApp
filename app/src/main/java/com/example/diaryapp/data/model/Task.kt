@@ -1,4 +1,4 @@
-package com.example.diaryapp.data
+package com.example.diaryapp.data.model
 
 
 import androidx.room.Entity
