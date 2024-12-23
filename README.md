@@ -6,16 +6,16 @@ DiaryApp — это мобильное приложение для управл�
 
 *Здесь вы можете добавить скриншоты вашего приложения, чтобы визуально продемонстрировать его функциональность.*
 
-   ![Скриншот создания новой задачи](![Screenshot from 2024-12-23 20-28-20](https://github.com/user-attachments/assets/9d846e63-4202-46ea-918e-b73616041f40)
+   ![Скриншот создания новой задачи(![Screenshot from 2024-12-23 20-28-20](https://github.com/user-attachments/assets/9d846e63-4202-46ea-918e-b73616041f40)
 )
 
-   ![Скриншот создания новой задачи](![Screenshot from 2024-12-23 20-28-14](https://github.com/user-attachments/assets/3c38c12a-a446-4035-8001-d41855ded635)
+   (![Screenshot from 2024-12-23 20-28-14](https://github.com/user-attachments/assets/3c38c12a-a446-4035-8001-d41855ded635)
 )
 
-   ![Скриншот создания новой задачи](![Screenshot from 2024-12-23 20-27-52](https://github.com/user-attachments/assets/04afa48d-e2c8-44a1-9ed5-1a54ecd7b97a)
+   (![Screenshot from 2024-12-23 20-27-52](https://github.com/user-attachments/assets/04afa48d-e2c8-44a1-9ed5-1a54ecd7b97a)
 )
 
-   ![Скриншот выбора даты](![Screenshot from 2024-12-23 20-26-48](https://github.com/user-attachments/assets/e113a7e9-42c8-47a0-9259-cd2679f4d3ee)
+   (![Screenshot from 2024-12-23 20-26-48](https://github.com/user-attachments/assets/e113a7e9-42c8-47a0-9259-cd2679f4d3ee)
 )
 
 ## Основные функции
